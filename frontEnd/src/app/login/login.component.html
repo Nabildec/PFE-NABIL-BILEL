@@ -1,0 +1,37 @@
+<section>
+
+    <div id="main">
+
+        <form [formGroup]="form" (submit)="submit()" novalidate>
+            <h1>Bienvenue sur <b>MONITOREX</b></h1>
+            <p>Bienvenue sur la plateforme MONITOREX où vous pouvez avoir une vue d'ensemble sur l'état des differents  web services de la CASNOS.</p>
+            <div id="Mail">
+
+                <label>Email</label>
+                <div class="input-icons">
+                    <input (click)="toucher()" formControlName="email" type="email" placeholder="exemple@gmail.com" required><br>
+                </div>
+                <small *ngIf="!mailCorrect">{{mailMessage}}</small><br>
+                <small *ngIf="(form.get('email')?.invalid && form.get('email')?.touched )|| (booleen1 && form.get('email')?.invalid)">Entrer un email
+                    valide</small><br>
+
+            </div>
+            <label>Mot de passe</label>
+            <div class="input-icons">
+                <input (click)="toucher()" formControlName="password" [type]="changetype?'password':'text'" placeholder="**********"
+                    required>
+
+                <i *ngIf="!visible" class="eyeIcon" (click)="viewpass()" class="fa-regular fa-eye"></i>
+                <i *ngIf="visible" class="eyeIcon" (click)="viewpass()" class="fa-regular fa-eye-slash"></i>
+
+            </div>
+
+            <small *ngIf="(form.get('password')?.invalid && form.get('password')?.touched)|| booleen">Entrer un mot de
+                passe</small><br>
+            <small *ngIf="!passCorrect">{{passMessage}}</small><br>
+            <button  type="submit">Se connecter</button>
+        </form>
+    </div>
+
+    <img src="../../assets/images/bg.jpg" alt="">
+</section>

@@ -1,0 +1,32 @@
+<section id="dashboard">
+    <h1 id="board">Statistique</h1>
+
+  
+        <nav id="buttons">
+            <span class="{{weekButton}}" (click)="turnToWeekly()">Statistique de la semaine</span>
+            <span class="{{monthButton}}" (click)="turnToMonthly()">Statistique du mois</span>
+        </nav>
+   
+
+
+    <div id="entete">
+       
+        <div *ngFor="let info of entete ; let i = index;">
+            <h2>{{entete[i]['name']}} </h2><br>
+            <h1> {{entete[i]['value']}}</h1>
+           
+            
+        </div>
+
+
+</div>
+   
+
+
+
+    <barChart [duration]="duration"></barChart>
+
+    <evolutionGraph class="evolution" [duration]="duration"></evolutionGraph>
+
+
+</section>

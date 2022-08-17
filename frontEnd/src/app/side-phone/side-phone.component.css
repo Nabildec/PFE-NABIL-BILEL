@@ -1,0 +1,96 @@
+#userImg {
+    width: 4em;
+    border-radius: 100px;
+    margin: 1.5em;
+    border: solid #E3E3E2 2px;
+
+}
+#sidephone{
+    z-index: 1000px;
+}
+#name
+{
+    font-size: 14px;
+    font-weight:bolder;
+}
+#role
+{
+    font-size: 14px;
+    font-weight:lighter;
+}
+#userP {
+    margin-top: 2.2em;
+    margin-left: 0.5em;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 1em;
+}
+
+.menuImg {
+    width: 2em;
+    margin-top: 2em;
+
+
+}
+
+#sidephone {
+    background-color: #164754;
+    color: white;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    width: 100%;
+}
+
+#toggle {
+    position: absolute;
+    background-color: #2b6c7e;
+    text-align: center;
+    width: 100%;
+
+}
+
+#toggle h2 {
+    padding: 20px;
+}
+
+#toggle h2:hover {
+    background-color: #164754;
+}
+
+#toggle a {
+    text-decoration: none;
+    color: white;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .sidebar {
+        width: 0;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+@media only screen and (min-width: 601px)and (max-width: 768px) {
+    #sidephone {
+        display: none;
+    }
+
+    #toggle {
+        display: none;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 769px) {
+    #sidephone {
+        display: none;
+    }
+
+    #toggle {
+        display: none;
+    }
+}

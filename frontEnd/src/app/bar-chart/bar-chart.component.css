@@ -1,0 +1,51 @@
+#main{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 16px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+    min-height: 4em;
+  
+}
+#a,#b{
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    border-radius: 5px ;
+    color: #164754;
+    max-height: 50vh;
+    min-height: 40vh;
+   
+   
+}
+::ng-deep g  text element.style{
+ 
+  color: red;
+}
+element.style {
+    font-size: 4px;
+}
+
+
+
+element.style {
+    font-size: 4pt;
+}
+@media only screen and (max-width: 600px) {
+    #main {
+       
+        display: grid;
+      
+        grid-template-columns: 1fr;
+      
+    }
+    #a,#b{
+       width: 80%;
+       margin-bottom: 20px;
+       
+    }
+  
+}

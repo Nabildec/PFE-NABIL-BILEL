@@ -1,0 +1,26 @@
+<div id="sidephone" class="{{class}}">
+    <img id="userImg" src="../../assets/images/profile.png" alt="">
+    <div id="userP">
+        <h1 id="name">{{name}}</h1>
+        <h1 id="role"> {{role}}</h1>
+    </div>
+    <img (click)="hideShow()" *ngIf="class=='hide'" class="menuImg" src="../../assets/images/menu (4).png" alt="">
+    <img (click)="hideShow()" *ngIf="class==''" class="menuImg" src="../../assets/images/close.png" alt="">
+</div>
+<div id="toggle" class="{{class}}">
+    <a (click)="hideShow()" routerLink="/user/webservice">
+        <h2>Tableaux de bords</h2>
+    </a><br>
+    <a (click)="hideShow()" routerLink="/user/statistique">
+        <h2>Statistique</h2>
+    </a><br>
+    <a (click)="hideShow()" routerLink="/user/historique">
+        <h2>Historique</h2>
+    </a><br>
+    <a (click)="hideShow()" routerLink="/user/parametres">
+        <h2>Gestions des utilisateur</h2>
+    </a>
+    <a id="logout" routerLink="/" (click)="logout()">
+        <h2>Se Deconnecter</h2>
+    </a>
+</div>

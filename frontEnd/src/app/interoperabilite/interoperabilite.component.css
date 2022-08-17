@@ -1,0 +1,216 @@
+
+
+#dashboard {
+    background: #E3E3E2;
+    margin: 0 0 0 0;
+    min-height: 100vh;
+}
+
+#dashboard a {
+    text-decoration: none;
+}
+
+#div1 {
+    padding-top: 30px;
+    display: grid;
+    grid-gap: 4em;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 85%;
+    margin: auto;
+}
+
+#dashboard a {
+
+    color: white;
+
+}
+
+#dashboard #div1 div {
+    border-radius: 7px;
+    text-align: center;
+    padding: 0.5em;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.1);
+    border: white 2px solid;
+    min-width: 6em;
+    font-size: 1em;
+
+
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    width: 70%;
+    padding: 6px 0 6px 0;
+    border-radius: 100px;
+    border: none;
+    margin-top: 1.5em;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#dashboard img {
+    margin: 20px;
+    width: 40px;
+}
+
+#board {
+    margin: 0 0 2em 3em;
+    padding-top: 30px;
+    font-size: 1.3em;
+    color: #164754;
+    font-weight: 700;
+
+}
+
+#dashboard h2,
+#dashboard h3 {
+    text-align: left;
+    margin: 10px 0 0 20px;
+    font-size: 0.7em;
+}
+
+#notification {
+    background: white;
+    color: rgb(233, 18, 18);
+    padding: 15px;
+    margin: auto;
+    width: 83%;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.1);
+}
+
+#div1 h1 {
+    margin: 30px 0 20px 0;
+    color: white;
+}
+
+h2,
+h3 {
+    color: white;
+}
+
+.Up {
+    background-color: #19C272;
+
+}
+
+.Up button {
+    color: #19C272;
+}
+
+.Down {
+    background-color: #FF5151;
+
+
+}
+
+.Down button {
+    color: #FF5151;
+}
+
+#service {
+    font-size: 20px;
+    color: white;
+    background-color: #d2e0f8;
+    border-radius: 10px 0 0 0;
+
+
+}
+
+#service div {
+    margin: 40px;
+}
+
+#warning {
+    color: red;
+
+}
+
+
+
+
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 620px) {
+    #div1 {
+        padding-top: 30px;
+        display: grid;
+        grid-gap: 3em;
+        grid-template-columns: 1fr;
+        width: 60%;
+        margin: auto;
+    }
+
+    #dashboard #div1 div {
+        height: 183px;
+        width: 80%;
+        margin: auto;
+    }
+
+    #notification {
+        width: 50%;
+        margin: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px)and (max-width: 995px) {
+    #div1 {
+        padding-top: 30px;
+        display: grid;
+        grid-gap: 7em;
+      
+        grid-template-columns: 1fr 1fr;
+      
+       
+
+    }
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1400px) {
+    #div1 {
+        padding-top: 30px;
+        display: grid;
+        grid-gap: 3em;
+      
+        grid-template-columns: 1fr 1fr 1fr;
+      
+       
+
+    }
+}
+@media only screen and (min-width: 1401px) and (max-width: 1800px) {
+    #div1 {
+        padding-top: 30px;
+        display: grid;
+        grid-gap: 3em;
+      
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      
+       
+
+    }
+}
+@media only screen and (min-width: 1801px)  {
+    #div1 {
+        padding-top: 30px;
+        display: grid;
+        grid-gap: 3em;
+      
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      
+       
+
+    }
+}

@@ -1,0 +1,112 @@
+input,
+select {
+    display: block;
+    border: none;
+    padding: 7px;
+    margin-bottom: 20px;
+    margin-top: 7px;
+    border-radius: 2px;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.1);
+    width: 40%;
+}
+
+select {
+    width: 42%;
+}
+
+#check {
+    display: inline;
+    width: 10%;
+    box-shadow: none;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+
+
+#main {
+    background: #E3E3E2;
+    margin: 0 0 0 0;
+    min-height: 100vh;
+
+}
+
+#board {
+    margin: 0 0 30px 80px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.3em;
+    color: #164754;
+    font-weight: 700;
+
+}
+
+#align {
+
+    width: 70%;
+    margin: auto;
+    font-size: 14px;
+}
+
+button {
+    background-color: #164754;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    display: block;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+
+
+#password{
+    box-shadow: none;
+   padding: 0;
+   margin: 0;
+   width: 85%;
+   display: inline;
+}
+
+
+.input-icons i {
+    width: 15%;
+}
+  
+.input-icons {
+    width: 40%;    
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 7px 0 7px 10px;
+    margin: 10px 0 10px 0;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.1);
+}
+  
+.icon {
+   
+    min-width: 30px;
+    width: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .input-icons {
+        width: 70%;    
+        
+    }
+    input
+ {
+ 
+    width: 70%;
+}
+select{
+    width: 73%;
+}  
+       }

@@ -1,0 +1,77 @@
+<section id="dashboard">
+    <h1 id="board">Historique</h1>
+
+    <nav id="buttons">
+        <span class="{{stateButton}}" (click)="state()"> Historique des changement etats</span>
+        <span class="{{panneButton}}" (click)="panne()">Historique des pannes</span>
+    </nav> 
+
+    <div class="datepicker">
+<span >
+    <mat-form-field  >
+        <!-- <mat-label></mat-label> -->
+        <mat-date-range-input [formGroup]="range" [rangePicker]="picker" >
+          <input matStartDate formControlName="start" placeholder="Start date" (dateChange)="onDateChange()" >
+          <input matEndDate formControlName="end" placeholder="End date" (dateChange)="onDateChange()" >
+        </mat-date-range-input>
+        <!-- <mat-hint></mat-hint> -->
+        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+        <mat-date-range-picker #picker ></mat-date-range-picker>
+      
+        
+      </mat-form-field>
+    </span>
+</div>
+
+    <div class="list" *ngIf="stateButton=='active'">
+        <table >
+            <tr>
+                <th>Date</th>
+                <th>Heure</th>
+                <th>Etat</th>
+                <th>Service</th>
+                <th>Erreurs</th>
+            </tr>
+            <tr *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: page ,totalItems:totalLength }">
+                <td>{{post.date | date:'EEE dd MMM y '| titlecase }}</td>
+                <td>{{post.date| date: ' HH:mm:ss '}}</td>
+                <td id="up" *ngIf="post.state=='Up'" > <i class="fa-solid fa-circle-arrow-up"></i></td>
+                <td id="down" *ngIf="post.state=='Down'" > <i class="fa-solid fa-circle-arrow-down"></i></td>
+                <td> {{post.service_name}}</td>
+                <td>{{post.error_type_name}}</td>
+            </tr>
+            
+        </table>
+        <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+    </div>
+    
+    <div class="list" *ngIf="panneButton=='active'">
+        <table >
+            <tr>
+                <th>Date de l'erreur</th>
+                
+                
+                <th>Service</th>
+                <th>Erreurs</th>
+                <th>Date de resolution</th>
+            
+            </tr>
+            <tr *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: page ,totalItems:totalLength }">
+                <td>{{post.error_date | date:'EEE dd MMM y '| titlecase }} {{post.error_date| date: ' HH:mm:ss '}}</td>
+               
+                
+                <td> {{post.service_name}}</td>
+                <td>{{post.error_type_name}}</td>
+                <td *ngIf="post.error_res_date !=null" >{{post.error_res_date | date:'EEE dd MMM y '| titlecase }} {{post.error_res_date| date: ' HH:mm:ss '}}</td>
+                <td id="down" *ngIf="post.error_res_date ==null"><i class="fa-solid fa-ban"></i></td>
+            </tr>
+      
+         
+        </table>
+        <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+    </div>
+    
+
+
+
+</section>

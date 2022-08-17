@@ -1,0 +1,32 @@
+<div id="container" *ngIf="authentificated">
+   
+    <app-sidebar class="sidebar"></app-sidebar>
+
+   <app-fix-side-bar class="fixed"></app-fix-side-bar>
+
+    <main class="content">
+        <app-side-phone class="sidePhone"></app-side-phone>
+
+
+        <router-outlet></router-outlet>
+    </main>
+</div>
+
+<div *ngIf="!authentificated">
+    <p>{{message}}</p>
+
+</div>
+
+
+
+
+<!--
+<div *ngIf="authentificated">
+    <p>{{message}}</p>
+    <a routerLink="/" (click)="logout()">loggOut</a>
+</div>
+<div *ngIf="!authentificated">
+    <p>{{message}}</p>
+
+</div>
+-->

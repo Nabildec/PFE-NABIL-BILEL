@@ -1,0 +1,20 @@
+<aside class="sidebar" >
+    
+    <nav id="user">
+        <img src="../../assets/images/profile.png" alt="">
+     <h1 id="name">{{name}}</h1>
+     <h1 id="role"> {{role}}</h1>
+    </nav>
+ 
+        
+     <div routerLinkActive="curent"><a routerLink="/user/webservice"><i class="fa-solid fa-border-all"></i> &nbsp; <h2>Tableau de bord</h2></a></div>
+     <div class={{class}} routerLinkActive="curent" ><a routerLink="/user/statistique" > <i class="fa-solid fa-chart-line"> </i> &nbsp;<h2>Statistique</h2> </a></div>
+    <div class={{class}} routerLinkActive="curent"><a routerLink="/user/historique"><i class="fa-solid fa-clock-rotate-left"></i> &nbsp;<h2>Historique</h2></a></div>
+     <div routerLinkActive="curent"><a routerLink="/user/parametres"><i class="fa-solid fa-gear"></i> &nbsp;<h2>Gestions des utilisateurs</h2></a></div> 
+     
+     <br><br><br><br><br><br>
+    
+    <div id="logout"><a  (click)="logout()">Se Deconnecter &nbsp; &nbsp; &nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i> </a></div> 
+</aside>
+
+

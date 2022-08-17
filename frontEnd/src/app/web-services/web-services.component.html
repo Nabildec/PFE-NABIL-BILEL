@@ -1,0 +1,32 @@
+<section id="dashboard">
+   
+    <h1 id="board">Tableau de bord</h1>
+
+    <div id="notification" class="{{class}}">
+
+         Vous avez {{cpt}} anomalies. &nbsp;<i class="fa-solid fa-triangle-exclamation"></i>
+
+    </div>
+    <div id="div1">
+
+        <div *ngFor="let post of posts; let i = index;" class="{{post.status}} ">
+            <h1>{{post.name}}</h1>
+            <h2>{{post.cause}}</h2>
+              <h3>{{post.status}} depuis {{post.date | date:'EEEE d MMM y '| titlecase }}{{post.date | date: 'à HH:mm:ss '}}</h3>
+            <a  [routerLink]="post.service_id!=interId ? ['/user/details', post.service_id] : ['/user/interoperabilites']"> <button>Voir details</button> </a>
+              
+        </div>
+    
+        
+        <!--
+        <div class="{{x.status}}">
+            <h1> Site Web</h1>
+            <h2>{{x.status}}</h2
+            <h3>{{x.status}} depuis {{x.date}}</h3>
+        </div>
+          -->
+
+
+
+    </div>
+</section>

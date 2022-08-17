@@ -1,0 +1,43 @@
+<section id="main">
+    <h1 id="board">Ajouter un utilisateur</h1>
+    <section id="align">
+        <form [formGroup]="addform" (submit)="Ajouter()" novalidate>
+
+
+            <label for="Prenom">Prenom </label>
+            <input formControlName="first_name" type="text" required>
+
+            <label for="Nom">Nom </label>
+            <input formControlName="last_name" type="text" required>
+
+            <label for="email">Email</label>
+            <input formControlName="email" type="email" required>
+
+            <label for="password">Mot de passe</label>
+            <div class="input-icons">
+                <input id="password" formControlName="password" [type]="changetype?'password':'text'"  required>
+
+                <i *ngIf="!visible" class="eyeIcon" (click)="viewpass()" class="fa-regular fa-eye"></i>
+                <i *ngIf="visible" class="eyeIcon" (click)="viewpass()" class="fa-regular fa-eye-slash"></i>
+
+            </div>
+
+            <label for="role">Role</label>
+            <select formControlName="role" required>
+                <option value="Admin">Admin</option>
+                <option value="Developpeur">Developpeur</option>
+                <option value="Responsable Reseaux">Responsable Reseaux</option>
+                <option value="Responsable Bdd">Responsable Bdd</option>
+            </select>
+
+            <label for="receiveMail">Recevoir des emails</label>
+            <input  id="check" formControlName="receiveMail"  type="checkbox" >
+
+
+
+            <button [disabled]="!addform.valid" type="submit">Ajouter Utilisateur</button>
+        </form>
+    </section>
+
+
+</section>

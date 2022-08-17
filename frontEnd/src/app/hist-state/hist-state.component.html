@@ -1,0 +1,10 @@
+     <nav>
+        <div *ngFor="let post of posts | paginate: { itemsPerPage: 10, currentPage: page,totalItems:totalLength } ">
+           
+            <h2>  {{post.date | date:'EEE dd MMM y '| titlecase }}{{post.date| date: 'à HH:mm:ss '}}  &nbsp; &nbsp; &nbsp; &nbsp; <img src="../../assets/images/{{post.state}}.png" alt="">  
+            &nbsp; &nbsp;<img src="../../assets/images/{{post.error_type_name}}.png" alt="">   &nbsp; &nbsp; &nbsp; {{post.service_name}} - {{post.error_type_name}}  </h2> 
+            
+        </div>
+        <pagination-controls class="text-center my-pagination"  (pageChange)="page = $event"></pagination-controls>
+       </nav>
+  

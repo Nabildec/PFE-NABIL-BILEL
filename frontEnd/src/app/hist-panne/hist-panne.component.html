@@ -1,0 +1,11 @@
+
+     <nav>
+        <div *ngFor="let post of posts | paginate: { itemsPerPage: 7, currentPage: page ,totalItems:totalLength }">
+          <div *ngIf="!post.resolue">
+          <h2>  {{post.error_date | date:'EEE d MMM y '| titlecase }}{{post.error_date| date: 'à HH:mm:ss '}}  &nbsp; &nbsp; &nbsp; &nbsp; <img src="../../assets/images/{{post.resolue}}.png" alt="">  
+          &nbsp; &nbsp;<img src="../../assets/images/{{post.error_type_name}}.png" alt="">   &nbsp; &nbsp; &nbsp; {{post.service_name}} - {{post.error_type_name}} </h2> 
+          </div>
+      </div>
+      <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+     </nav>
+     

@@ -1,0 +1,96 @@
+<section id="dashboard">
+
+
+    <h1 id="board">Gestion des utilisateur</h1>
+    <button routerLink="/user/addUser">Ajouter un utilisateur <img id="add" src="../../assets/images/add.png"
+        alt=""></button>
+  
+    <table>
+      <tr>
+        <th></th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th class="hide">Email</th>
+        <!--<th>Password</th>-->
+        <th class="hide">Role</th>
+        <th>Recevoir<br>email</th>
+        <th>Options</th>
+      </tr>
+  
+  
+      <tr *ngFor="let post of posts | paginate: { itemsPerPage: 9, currentPage: page ,totalItems:totalLength }">
+  
+        <td><img id="profile" src="../../assets/images/profile.png" alt=""></td>
+        <td>{{post.last_name}}</td>
+        <td>{{post.first_name}}</td>
+        <td class="hide">{{post.email}}</td>
+        <!--
+        <td><input  type="password" readonly value="{{post.password}}" ><br></td>
+     -->
+        <td class="hide">{{post.role}}</td>
+        
+        <td *ngIf="post.receiveMail==1">
+             
+          
+            <label class="switch">
+              <input 
+              type="checkbox" 
+              required="post.receiveMail" 
+              [value]="post.id" 
+              [checked]=true 
+              (change)="sendMail($event,post.email)" />
+              <span class="slider round"></span>
+            </label>  
+        </td>
+  
+        <td *ngIf="post.receiveMail !=1">
+         
+         
+          <label class="switch">
+            <input 
+            type="checkbox" 
+            required="post.receiveMail" 
+            [value]="post.id" 
+            [checked]=false 
+            (change)="sendMail($event,post.email)" />  
+            <span class="slider round"></span>
+          </label>
+      </td>
+        
+        <td>
+  
+          <a [routerLink]="['/user/setUser', post.id]">
+            <img id="edit" src="../../assets/images/edit.png" alt="">
+          </a>
+  
+          <a routerLink="/user/parametres" id="deleteButton" (click)="deleteUser(post.email)">
+  
+            <img id="delete" src="../../assets/images/delete (1).png" alt="">
+          </a>
+  
+        </td>
+      </tr>
+  
+  
+  
+      <tr>
+        <td></td>
+        <td></td>
+        <td class="hide"></td>
+        <td><pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+  
+  
+      
+    </table>
+  
+  
+  
+  
+  
+  
+  
+  </section>

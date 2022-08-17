@@ -1,0 +1,177 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+.my-pagination /deep/ .ngx-pagination {
+  
+
+
+ text-align: right;
+}
+#dashboard
+{
+    background: #E3E3E2;
+    margin: 0 0 0 0;
+    min-height: 140vh; 
+   
+}
+.small{
+  width: 20px;
+}
+table {
+
+    font-family: 'Poppins', sans-serif;
+
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    padding: 0 30px 0 30px;
+    border-radius:7px ;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.1);
+    color: rgb(41, 41, 41);
+
+  }
+  
+  td, th {
+    border: 0.1px solid #dddddd;
+    border-left:none ;
+    border-right:none ;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 14px;
+  }
+  th{
+      font-weight: bold;
+      border: none;
+     
+  }
+  #profile{
+      width: 40px;
+      border-radius: 100px;
+      margin: 0;
+  }
+  #on{
+      width: 30px;
+  }
+  #delete,#edit{
+    width: 15px;
+    margin: 5px 20px;
+}
+
+
+
+
+  #board
+{
+    margin:0 0 20px 80px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 1.3em;
+    color: #164754;
+    font-weight: 700;
+
+}
+#deleteButton{
+
+
+}
+input{
+  border: none;
+  text-align: center;
+  width: 8ch;
+}
+
+button{
+  background-color: #164754;
+  color:white;
+  border: none;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 0 0 20px 55px;
+  font-size: 12px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#add{
+  width: 12px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+
+}
+
+
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(255, 255, 255);
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #1dcb40;
+}
+
+
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+ .hide{
+   display: none;
+ }
+ table{
+   width: 100%;
+ }
+
+ }

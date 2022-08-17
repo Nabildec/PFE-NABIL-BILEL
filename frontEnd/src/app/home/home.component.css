@@ -1,0 +1,34 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#container {
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+}
+
+
+.sidebar {
+    position: fixed;
+    width: 17%;
+}
+
+.fixed {
+    width: 17%;
+}
+
+.content {
+    flex-grow: 1;
+
+}
+@media only screen and (max-width: 600px) {
+    .sidebar {
+       
+        width: 0;
+    }
+    
+    .fixed {
+        width: 0;
+    }
+}

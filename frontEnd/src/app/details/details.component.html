@@ -1,0 +1,17 @@
+<section id="dashboard">
+
+    <h1 id="board">{{this.title}}</h1>
+
+    
+    <nav id="grid">
+        
+        <div *ngFor="let post of posts; let i = index;"class="{{post.status}}">
+             <img src="../../assets/images/{{post.name}}.png" alt="">
+            <h1 class="h1">{{post.name}}</h1>
+            <h2>Etat : {{post.status}}</h2>
+            <h2>Depuis : {{post.status}} depuis {{post.date | date:'EEEE d MMM y '| titlecase }}{{post.date | date: 'à HH:mm:ss '}}</h2>
+        </div>
+    </nav>
+
+
+</section>

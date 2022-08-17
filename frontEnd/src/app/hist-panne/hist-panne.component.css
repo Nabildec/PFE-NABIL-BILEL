@@ -1,0 +1,44 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+    background: #164754;
+    margin-top: 50px;
+    
+  }
+#details
+{
+    background: #E3E3E2;
+    margin: 0 0 0 0;
+    min-height: 100vh;
+   
+   
+    
+}
+
+nav{
+    width: 80%;
+    margin: auto;
+    min-height: 78vh;
+    background-color: white;
+    box-shadow: 10px 10px 17px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    
+    
+}
+div{
+    
+    
+    
+    
+}
+
+h2{
+    margin-left: 40px;
+    font-weight: 100;
+    padding-top: 40px;
+    font-size: 12px;
+}
+img{
+    width: 12px;
+}
